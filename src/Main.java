@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        String login = "John_Doe";
-        String password = "vvrrRRfq2";
-        String confirmPassword = "vvrrRRfq22";
+        String login = "John_Doe000000000000000000000000";
+        String password = "vvrrRRfq100";
+        String confirmPassword = "vvrrRRfq101";
         checkLoginPassword(login, password, confirmPassword);
     }
 
@@ -10,14 +10,14 @@ public class Main {
         try {
             check(login);
         } catch (WrongLoginException e) {
-            System.out.println("Логин содержит недопустимые символы");
+            System.out.println("Логин содержит недопустимые символы или длиннее 20 символов");
         } finally {
             System.out.println("Логин проверен");
         }
         try {
             check(password);
         } catch (WrongPasswordException e) {
-            System.out.println("Пароль содержит недопустимые символы");
+            System.out.println("Пароль содержит недопустимые символы или длиннее 20 символов");
         } finally {
             System.out.println("Пароль проверен");
         }
